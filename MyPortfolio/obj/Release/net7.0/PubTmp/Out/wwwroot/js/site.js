@@ -1,22 +1,48 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.sidebar nav ul li a');
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.sidebar nav ul li a');
 
-    for (const link of links) {
+    // Function to remove active class from all links
+    function removeActiveClasses() {
+        navLinks.forEach(link => link.parentElement.classList.remove('active'));
+    }
+
+    // Function to add active class to the link corresponding to the current section
+    function addActiveClass(section) {
+        removeActiveClasses();
+        const activeLink = document.querySelector(`.sidebar nav ul li a[href="#${section.id}"]`);
+        if (activeLink) {
+            activeLink.parentElement.classList.add('active');
+        }
+    }
+
+    // Event listener for scroll events
+    window.addEventListener('scroll', function () {
+        let currentSection = sections[0];
+
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 10;
+            if (scrollY >= sectionTop) {
+                currentSection = section;
+            }
+        });
+
+        addActiveClass(currentSection);
+    });
+
+    // Event listener for click events on nav links
+    navLinks.forEach(link => {
         link.addEventListener('click', function (e) {
             e.preventDefault();
 
-            // Remove active class from all links
-            links.forEach(l => l.parentElement.classList.remove('active'));
-
-            // Add active class to the clicked link
-            this.parentElement.classList.add('active');
-
-            // Smooth scroll to the target section
-            const target = document.querySelector(this.getAttribute('href'));
+            const targetSection = document.querySelector(this.getAttribute('href'));
             window.scrollTo({
-                top: target.offsetTop,
+                top: targetSection.offsetTop,
                 behavior: 'smooth'
             });
+
+            removeActiveClasses();
+            this.parentElement.classList.add('active');
         });
-    }
+    });
 });
