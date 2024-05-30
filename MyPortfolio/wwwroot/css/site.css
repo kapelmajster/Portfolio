@@ -1,0 +1,175 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #19181A; /* Dark background */
+    color: #ffffff;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    background-color: #19181A; /* Dark Gray */
+    width: 350px; /* Adjusted width */
+    height: 100vh;
+    padding: 40px 20px; /* Increased padding */
+    position: fixed;
+    top: 0;
+    left: 20%; /* Adjusted left position */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.profile {
+    margin-top: 100px; /* Adjust the top margin to align name with content */
+    margin-bottom: 40px; /* Space between name and menu */
+}
+
+    .profile h2 {
+        color: #CEBC81; /* Beige */
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+.sidebar nav {
+    margin-top: 50px; /* Adjust the top margin of the menu */
+}
+
+    .sidebar nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .sidebar nav ul li {
+            margin-bottom: 20px;
+        }
+
+            .sidebar nav ul li a {
+                color: #CEBC81; /* Beige */
+                text-decoration: none;
+                font-size: 1.2rem;
+                position: relative;
+                padding-left: 20px;
+                display: inline-block;
+                width: 100%;
+                transition: color 0.3s ease, padding-left 0.3s ease;
+            }
+
+                .sidebar nav ul li a::before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    height: 1px;
+                    width: 0;
+                    background-color: #479761; /* Green */
+                    transition: width 0.3s ease;
+                }
+
+                .sidebar nav ul li a:hover::before,
+                .sidebar nav ul li.active a::before {
+                    width: 100%;
+                }
+
+                .sidebar nav ul li a:hover,
+                .sidebar nav ul li.active a {
+                    color: #479761; /* Green */
+                    padding-left: 30px; /* Move right on hover and active */
+                }
+
+.social-links {
+    margin-top: auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.social-icon {
+    color: #CEBC81; /* Beige */
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+    .social-icon:hover {
+        color: #479761; /* Green */
+    }
+
+.content {
+    margin-left: 420px; /* Adjusted margin to match sidebar width */
+    padding: 20px;
+    flex: 1;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #333333; /* Darker background for sections */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background-color 0.3s; /* Only transition background-color */
+}
+
+    .project-link:hover {
+        background-color: #444444; /* Slightly lighter background on hover */
+        border-radius: 10px;
+    }
+
+h2 {
+    color: #CEBC81; /* Beige */
+    font-size: 2rem;
+}
+
+h3, h4 {
+    color: #E2BB5A; /* Different shade for project titles */
+    font-size: 1.5rem;
+}
+
+p {
+    color: #B19F9E; /* Grayish Pink */
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.language-badge {
+    display: inline-block;
+    background-color: #479761; /* Green */
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-right: 5px;
+}
+
+/* Additional styling to improve readability */
+section#about {
+    background-color: #2c2c2c; /* Slightly lighter background */
+}
+
+section#projects {
+    background-color: #2c2c2c; /* Slightly lighter background */
+}
+
+section#contact {
+    background-color: #2c2c2c; /* Slightly lighter background */
+}
