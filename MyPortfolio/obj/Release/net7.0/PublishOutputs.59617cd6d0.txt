@@ -1,0 +1,7 @@
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\MyPortfolio.exe
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\appsettings.Development.json
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\appsettings.json
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\MyPortfolio.dll
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\MyPortfolio.deps.json
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\MyPortfolio.runtimeconfig.json
+Y:\MyPortfolio\MyPortfolio\obj\Release\net7.0\PubTmp\Out\MyPortfolio.pdb
